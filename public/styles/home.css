@@ -1,0 +1,102 @@
+#page-home {
+  height: 100vh; /*view height 100 é o maximo?*/
+   background: url('../assets/home-background.svg');
+   background-repeat: no-repeat;
+   background-position: 35vw 5vw;
+
+}
+
+
+#page-home header {
+  margin-top: 48px;
+  display: flex; /* os filhos de header ficam lado a lado*/
+  align-items: center; /* os itens ficam alinhados no eixo y*/
+  justify-content: space-between;
+}
+
+#page-home .content {
+  width: 90%;
+  max-width: 1100px; /*tamanho máximo que o div com esta classe se ajusta*/
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+#page-home header a{
+  display: flex;
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+#page-home header a span{
+  display: flex;
+  margin-right: 12px;
+  background-image: url('../assets/log-in.svg');
+  width: 20px;
+  height: 20px;
+}
+
+#page-home main{
+  max-width: 560px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#page-home main h1 {
+  font-size: 54px;
+}
+
+#page-home main p {
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 24px;
+}
+
+#page-home main a {
+  width: 100%;
+  max-width: 360px;
+  background-color: var(--primary-color);
+  height: 72px;
+  border-radius: 8px;
+  display: flex; /* com essa propriedade pode-se centralizar os elementos filhos*/
+  align-items: center;
+  margin-top: 40px;
+  transition: 400ms; /*para deixar a aparição do hover mais suave*/
+}
+
+#page-home main a:hover{
+  background-color: #2fb86e;
+}
+
+#page-home main a span{
+  width: 72px;
+  height: 72px;
+
+  /*para arredondar as bordar do quadrado que está dentro do botão*/
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.08); /* o a no fim representa a transparencia*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#page-home main a span::after{
+  content:"";
+  background-image: url('../assets/search.svg');
+  width: 20px;
+  height: 20px;
+}
+
+#page-home main a strong{
+  flex: 1; /*faz o conteúdo da tag strong ocupar todo o tamanhoda caixa*/
+  color: white;
+  text-align: center;
+}
